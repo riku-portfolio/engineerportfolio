@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <!--レスポンシブ対応-->
+  <!--文字コードの指定-->
+  <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+  <!--IE対応-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!--メタディスクリプション-->
+  <meta name="description" content="ページの内容を表す文章" />
+  <!--検索避け こちらは検索エンジンに対して「このページをインデックス（掲載）しないで！」という指示をするためのタグです。
+      低品質なページや、ユーザーにとって価値のないページに対して指定しておくのがおすすめです。
+      低品質なページ⇒noindex,nofollow
+      検索結果ページ⇒noindex,nofollow
+      タグ/日付別ページ⇒noindex,follow
+      トップページやカテゴリーページの2ページ目以降⇒noindex,follow
+    -->
+  <meta name="robots" content="noindex,nofollow" />
+  <!--OGPタグ/twitterカード-->
+  <meta property="og:url" content="ページのURL" />
+  <meta property="og:title" content="ページのタイトル" />
+  <meta property="og:type" content="ページのタイプ">
+  <meta property="og:description" content="記事の抜粋" />
+  <meta property="og:image" content="画像のURL" />
+  <meta name="twitter:card" content="カード種類" />
+  <meta name="twitter:site" content="@Twitterユーザー名" />
+  <meta property="og:site_name" content="サイト名" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="fb:app_id" content="appIDを入力" />
+  <!--URLの正規化(link rel="canonical")-->
+  <link rel="canonical" href="正規化するURL" />
+  <!--サイトアイコンの指定 ※jpegは使わないように-->
+  <link rel="icon" href="画像URL" sizes="16x16" type="image/png" />
+  <link rel="icon" href="画像URL" sizes="32x32" type="image/png" />
+  <link rel="icon" href="画像URL" sizes="48x48" type="image/png" />
+  <link rel="icon" href="画像URL" sizes="62x62" type="image/png" />
+  <!--IE8〜10に対応する方法(pngやgifでなくicoを使用する)-->
+  <link rel="shortcut icon" href="画像URL（.ico）" type="image/x-icon" />
+  <!--スマホ用アイコン-->
+  <link rel="apple-touch-icon-precomposed" href="画像のURL" />
+  <!--Windows用タイル設定 winでピン止めしたときの表示-->
+  <meta name="msapplication-TileImage" content="画像のURL" />
+  <meta name="msapplication-TileColor" content="カラーコード（例：#F89174）" />
+  <!--フィードページのURLを指定-->
+  <link rel="alternate" type="application/rss+xml" title="フィード" href="フィードページのURL" />
+
+  <!--分割ページ用のタグ 主に1つの記事を複数ページに分割したときに使います。
+      1ページ目のhead内には<link rel="next" href="2ページ目のURL" />
+      最後のページには<link rel="prev" href="1つ前のページのURL" />、
+      それ以外のページにはprev、nextの両方を使って、前後のページのURLを指定します。-->
+  <!--
+      <link rel="prev" href="前のページのURL" />
+      <link rel="next" href="次のページのURL" />
+    -->
+
+  <!--電話番号やメールアドレスの変換設定  勝手にリンクにして欲しくないという場合に、こちらのmetaタグを指定しておきます。-->
+  <!--
+      <meta name="format-detection" content="email=no,telephone=no,address=no" />
+    -->
+
+  <!--cssファイルの指定-->
+  <link rel="stylesheet" type="text/css" href="css/works.css" />
+  <!--jsファイルの指定-->
+  <!--<script src="JavaScriptファイルのURL"></script>-->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="javascript/engineer_portfolio.js"></script>
+  <!--ページのタイトル-->
+  <title>mitani_riku_engineer_portfolio</title>
+</head>
+
+
+<body>
+  <div id="splash">
+    <div id="splash-logo">読み込み中</div>
+    <!--/splash-->
+  </div>
+  <div class="splashbg"></div>
+  <!---画面遷移用-->
+
+  <div id="container">
+    <header id="header">
+      <h1>Logo</h1>
+    </header>
+
+    <main>
+      <section>
+        <a href="Profile.html">samp2</a>
+        <h2>Area 1</h2>
+      </section>
+      <section>
+        <h2>Area 5</h2>
+        <p>
+          ss
+        </p>
+      </section>
+
+    </main>
+  </div>
+</body>
+
+</html>

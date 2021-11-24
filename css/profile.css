@@ -1,0 +1,186 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body {
+  background: #f1f4f7;
+  /*font-family: 'Noto Sans Japanese', sans-serif;*/
+  margin: 0 auto;
+}
+
+main {
+  background: #f9fbfc;
+  padding-top: 70px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#designhint {
+  height: 500px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: #0080c0;
+}
+
+.code {
+  color: #0080c0;
+}
+
+/*header*/
+header {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  background: #050505;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  align-items: center;
+}
+
+.title {
+  color: #fdfdfd;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+img{
+  width: 100px;
+  height: auto;
+}
+
+
+/*========= ローディング画面のためのCSS ===============*/
+#splash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  z-index: 9999999;
+  text-align: center;
+  color: #fff;
+}
+
+#splash-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/*========= 画面遷移のためのCSS ===============*/
+
+/*画面遷移アニメーション*/
+.splashbg {
+  display: none;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg {
+  display: block;
+  content: "";
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  background-color: #333;
+  /*伸びる背景色の設定*/
+  animation-name: PageAnime;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes PageAnime {
+  0% {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+
+  50% {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  50.001% {
+    transform-origin: right;
+  }
+
+  100% {
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container {
+  opacity: 0;
+  /*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container {
+  animation-name: PageAnimeAppear;
+  animation-duration: 0.8s;
+  animation-delay: 0.8s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes PageAnimeAppear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+.menu label {
+  margin-bottom: 0;
+  display: block;
+}
+
+.menu label:hover {
+  cursor: pointer;
+}
+.menu {
+  position: absolute;
+  display: block;
+  left: -200px;
+  top: 0;
+  width: 250px;
+  transition: all 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+  background-color: #000;
+  z-index: 999;
+}
+
+.overflow-container {
+  position: relative;
+  color:#ffffff;
+  height: calc(100vh - 73px)!important;
+  overflow-y: auto;
+  z-index: -1;
+  display:block;
+}
+
+.menu:hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
