@@ -1,4 +1,23 @@
 $(window).on('load',function(){
+      
+  ityped.init(document.querySelector("#ityped"), {
+    strings: ['Mitani Riku', 'Engineer portfolio']
+})
+      
+});
+
+
+
+$('.nav-toggle').click(function(e) {
+  
+  e.preventDefault();
+  $("html").toggleClass("openNav");
+  $(".nav-toggle").toggleClass("active");
+
+});
+
+/*
+$(window).on('load',function(){
   $("#splash-logo").delay(800).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
 
   //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
@@ -15,12 +34,8 @@ $(window).on('load',function(){
   });
   //=====ここまで背景が伸びた後に動かしたいJSをまとめる
       
+  ityped.init(document.querySelector("#ityped"), {
+    strings: ['Mitani Riku', 'Engineer portfolio']
+})    
 });
-
-$('.nav-toggle').click(function(e) {
-  
-  e.preventDefault();
-  $("html").toggleClass("openNav");
-  $(".nav-toggle").toggleClass("active");
-
-});
+*/

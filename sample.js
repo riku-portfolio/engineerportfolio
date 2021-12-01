@@ -1,7 +1,8 @@
-$('.nav-toggle').click(function(e) {
-  
-    e.preventDefault();
-    $("html").toggleClass("openNav");
-    $(".nav-toggle").toggleClass("active");
-  
-  });
+
+$(window).on('load',function(){
+  ityped.init(document.querySelector("#ityped"), {
+    strings: ['Hello World!', 'Welcome to Into the Program!']
+})
+      
+});
+
