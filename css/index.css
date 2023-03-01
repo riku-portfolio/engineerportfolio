@@ -1,0 +1,259 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+/*ヘッダー*/
+header {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  background: #9bc1ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.header__title {
+  color: #fdfdfd;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.header__inner {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header__nav {
+  margin-left: auto;
+  display: flex;
+  flex: none;
+  
+}
+
+.header__nav>*+* {
+  margin-left: 60px;
+}
+
+.header__nav--item {
+  font-size: 16px;
+  color: #fdfdfd;
+}
+
+.header__nav--item a {
+  color: #fdfdfd;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+}
+
+.header__nav--item a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #fdfdfd;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .3s;
+}
+
+.header__nav--item a:hover::after {
+  transform: scale(1, 1);
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body {
+  /*font-family: 'Noto Sans Japanese', sans-serif;*/
+  margin: 0 auto;
+  background-color: #F8F6FF;
+}
+
+main {
+  padding: 30px 200px;
+  z-index: 1;
+}
+
+.type {
+  width: 12em;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid rgba(0, 0, 0, 0.5);
+  animation: typing 0.5s steps(10),
+    blink .5s steps(1) infinite alternate;
+}
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+section{
+  background: #fff;
+  border-radius: 10px;
+  padding:30px;
+  box-shadow: 7px 9px 22px #bababa55;
+  margin: 30px;
+}
+
+.top{
+  height: 560px;
+  padding: 100px 30px;
+}
+
+.section__top--title{
+  font-size: 48px;
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+.section__title{
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 4px;
+}
+
+.section__subtitle{
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.section__textbox{
+  padding: 0 40px;
+  text-align: center;
+} 
+
+.service__list{
+  list-style: none;
+  padding: 0;
+  margin: 20px;
+}
+
+.service__list--item{
+  display: inline-block;
+  margin: 30px;
+}
+
+.flow__list{
+  list-style: none;
+  padding: 0;
+  margin: 20px;
+}
+
+.flow__list--item{
+  display: inline-block;
+  margin: 30px;
+}
+
+img{
+  display: block;
+  width: 300px;
+  height: auto;
+}
+
+
+/*wrap*/
+.wrap{
+  position:absolute;
+  right: -600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.circle{
+  background: linear-gradient(140deg,#B588F7, #1DE5E2);
+  padding-top: 30%;
+  width: 30%;
+
+  animation-name: puyopuyo;
+  animation-duration: 20.0s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes puyopuyo{  
+  0%{
+      border-radius: 73% 47% 64% 56%/65% 58% 62% 55%;
+  }
+  14%{
+      border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+  }
+  28%{
+      border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+  }
+  42%{
+      border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+  }
+  56%{
+      border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+  }
+  70%{
+      border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+  }
+  84%{
+      border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+  }
+  100%{
+      border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+  }
+}
+
+
+.circle-1 {
+  z-index: -1;
+  position: absolute;
+  width: 280px;
+  height: 300px;
+  left: 20%;
+  mix-blend-mode: multiply;
+  background: #f66;
+  border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
+  animation: border-animation 6s infinite linear;
+}
+.circle-2 {
+  z-index: -1;
+  position: absolute;
+  width: 280px;
+  height: 300px;
+  left: 20%;
+  mix-blend-mode: multiply;
+  background: #f92;
+  border-radius: 80% 30% 50% 50%/50%;
+  animation: border-animation 4s infinite linear;
+}
+.circle-3 {
+  z-index: -1;
+  position: absolute;
+  width: 280px;
+  height: 300px;
+  left: 20%;
+  mix-blend-mode: multiply;
+  background: #fc2;
+  border-radius: 40% 40% 50% 40%/30% 50% 50% 50%;
+  animation: border-animation 3s infinite linear;
+}
+
+/* Animation */
+@keyframes border-animation {
+  to { transform: rotate(360deg); }
+}
