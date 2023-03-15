@@ -1,21 +1,26 @@
 @charset "utf-8";
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 
+
+
+img{
+  width: 300px;
+}
+
 /*ヘッダー*/
 header {
-  position: fixed;
   width: 100%;
   height: 70px;
-  background: #5b6c88;
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 2;
-  box-shadow: 7px 9px 22px #74747435;
+  background-color: #edece7;
+  box-shadow: 7px 9px 22px #42424235;
 }
 
 .header__title {
-  color: #fdfdfd;
+  color: #000;
   font-size: 20px;
   font-weight: bold;
 }
@@ -41,11 +46,11 @@ header {
 
 .header__nav--item {
   font-size: 16px;
-  color: #fdfdfd;
+  color: #000;
 }
 
 .header__nav--item a {
-  color: #fdfdfd;
+  color: #000;
   text-decoration: none;
   font-weight: bold;
   position: relative;
@@ -59,7 +64,6 @@ header {
   content: '';
   width: 100%;
   height: 2px;
-  background: #fdfdfd;
   transform: scale(0, 1);
   transform-origin: left top;
   transition: transform .3s;
@@ -67,6 +71,12 @@ header {
 
 .header__nav--item a:hover::after {
   transform: scale(1, 1);
+}
+
+footer{
+  color: #fff;
+  background-color: #2E2E2A;
+  height: 360px;
 }
 
 
@@ -79,7 +89,6 @@ body {
 }
 
 main {
-  padding: 30px 200px;
   z-index: 1;
 }
 
@@ -105,17 +114,32 @@ main {
 /*========= レイアウトのためのCSS ===============*/
 
 section{
+  margin-top: 120px;
+  padding: 30px 0 30px;
+}
+
+.contents{
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.panel{
   background: #fff;
   border-radius: 10px;
-  padding:30px;
   box-shadow: 7px 9px 22px #bababa55;
-  margin: 30px;
+  padding:30px;
+  max-width: 980px;
+  width: 100%;
+  height: 320px;
+  margin: 0 auto;
 }
 
 .top{
-  height: 740px;
+  height: 540px;
   padding: 100px 30px;
-  background-color: #49f1d3;
+  background-color: #edece7;
+  text-align: center;
+
 }
 
 .section__top--title{
@@ -124,11 +148,16 @@ section{
   letter-spacing: 5px;
 }
 
+.section__top--img{
+  margin: 0 auto;
+  width: 600px;
+}
+
 .section__title{
-  font-size: 28px;
+  font-size: 32px;
   text-align: center;
   margin-bottom: 40px;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
 }
 
 .section__subtitle{
@@ -138,13 +167,13 @@ section{
 
 .section__textbox{
   padding: 0 40px;
-  text-align: center;
+  text-align: left;
 } 
 
 .service__list{
   list-style: none;
   padding: 0;
-  margin: 20px;
+  margin: 10px;
 }
 
 .service__list--item{
@@ -152,21 +181,80 @@ section{
   margin: 30px;
 }
 
+/*flow*/
 .flow__list{
   list-style: none;
   padding: 0;
-  margin: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
 }
 
 .flow__list--item{
-  display: inline-block;
-  margin: 30px;
+  width: 250px;
+  height: auto;
 }
 
-img{
-  display: block;
-  width: 300px;
-  height: auto;
+.flow__list--img{
+  width: 100%;
+}
+
+.flow__list--process{
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+/*left right box*/
+
+.explanation__textarea{
+  display: flex;
+  justify-content: space-between;
+  height: 470px;
+  margin-top: 100px;
+}
+
+.left{
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  width: 40%;
+}
+
+.right{
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  width: 40%;
+  line-height: 2;
+}
+
+.explanation__panel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 7px 9px 22px #bababa55;
+  padding:30px;
+  max-width: 980px;
+  width: 100%;
+  height: 320px;
+  margin: 0 auto;
+}
+
+/*contact*/
+.contact-panel{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 7px 9px 22px #bababa55;
+  padding:30px;
+  max-width: 980px;
+  width: 100%;
+  height: 480px;
+  margin: 0 auto;
 }
 
 
@@ -186,7 +274,6 @@ img{
   background: linear-gradient(140deg,#B588F7, #1DE5E2);
   padding-top: 30%;
   width: 30%;
-
   animation-name: puyopuyo;
   animation-duration: 20.0s;
   animation-timing-function: ease;
@@ -222,33 +309,33 @@ img{
 
 
 .circle-1 {
-  z-index: -1;
+  z-index: 1;
   position: absolute;
   width: 280px;
   height: 300px;
-  left: 20%;
+  left: 3%;
   mix-blend-mode: multiply;
   background: #f66;
   border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
   animation: border-animation 6s infinite linear;
 }
 .circle-2 {
-  z-index: -1;
+  z-index: 1;
   position: absolute;
   width: 280px;
   height: 300px;
-  left: 20%;
+  left: 3%;
   mix-blend-mode: multiply;
   background: #f92;
   border-radius: 80% 30% 50% 50%/50%;
   animation: border-animation 4s infinite linear;
 }
 .circle-3 {
-  z-index: -1;
+  z-index: 1;
   position: absolute;
   width: 280px;
   height: 300px;
-  left: 20%;
+  left: 3%;
   mix-blend-mode: multiply;
   background: #fc2;
   border-radius: 40% 40% 50% 40%/30% 50% 50% 50%;
@@ -258,4 +345,10 @@ img{
 /* Animation */
 @keyframes border-animation {
   to { transform: rotate(360deg); }
+}
+
+
+.blue{
+  position: absolute;
+  right: 20%;
 }
